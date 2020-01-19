@@ -33,11 +33,6 @@ async function promptUser() {
             },
             {
                 type: "input",
-                name: "location",
-                message: "What is your current location?"
-            },
-            {
-                type: "input",
                 name: "github",
                 message: "What is your Github username?"
             }
@@ -62,7 +57,7 @@ function generateHTML(answers) {
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <title>Document</title>
         <link href="https://fonts.googleapis.com/css?family=Gelasio&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./index.css">
     </head>
     
     <body>
@@ -132,7 +127,7 @@ async function init() {
             'orientation': 'portrait',
             "type": "pdf",
             "quality": "75",
-            "base": "file://C:/UNCBootcamp_Class/developer-profile-generator/style.css"
+            "base": "file://C:/UNCBootcamp_Class/developer-profile-generator/index.css"
         };
 
         pdf.create(readHTML, save).toFile(`./pdfs/${name}'s_github_profile.pdf`, function (err, res) {
